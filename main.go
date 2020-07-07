@@ -17,7 +17,7 @@ type result struct {
 func main() {
 	token, ok := os.LookupEnv("GITHUB_TOKEN")
 	if !ok || token == "" {
-		fmt.Fprintf(os.Stderr, "unable to find github api token\n")
+		fmt.Fprintf(os.Stderr, "unable to find github api token in GITHUB_TOKEN\n")
 		os.Exit(1)
 	}
 
